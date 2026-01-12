@@ -8,16 +8,16 @@ properties:
         allowPrerelease: false
       settings:
         Ensure: Present
-        
+  
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: vsPackage
+      id: chatgpt
       directives:
-        description: Install Visual Studio 2022 Professional
+        description: Install ChatGPT
         allowPrerelease: false
       settings:
-        id: Microsoft.VisualStudio.2022.Professional
+        id: lencx.ChatGPT
         source: winget
-        
+
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: vscodePackage
       directives:
@@ -37,6 +37,33 @@ properties:
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: antigravity
+      directives:
+        description: Install Antigravity
+        allowPrerelease: false
+      settings:
+        id: Google.Antigravity
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: kirodev
+      directives:
+        description: Install Kiro
+        allowPrerelease: false
+      settings:
+        id: Amazon.Kiro
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: opencode
+      directives:
+        description: Install OpenCode
+        allowPrerelease: false
+      settings:
+        id: SST.OpenCodeDesktop
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: postmanPackage
       directives:
         description: Install Postman
@@ -46,12 +73,12 @@ properties:
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: dotnetCore9
+      id: dotnetCore10
       directives:
-        description: Install .NET Core 9 SDK
+        description: Install .NET Core 10 SDK
         allowPrerelease: false
       settings:
-        id: Microsoft.DotNet.SDK.9
+        id: Microsoft.DotNet.SDK.10
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
@@ -68,6 +95,14 @@ properties:
         description: Install GitHub Desktop
       settings:
         id: GitHub.GitHubDesktop
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: gitKraken
+      directives:
+        description: Install GitKraken
+      settings:
+        id: Axosoft.GitKraken
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
@@ -104,6 +139,15 @@ properties:
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: rescuetime
+      directives:
+        description: Install RescueTime
+        allowPrerelease: false
+      settings:
+        id: RescueTime.DesktopApp
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: notionPackage
       directives:
         description: Install Notion
@@ -113,30 +157,12 @@ properties:
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: shareXPackage
-      directives:
-        description: Install ShareX
-        allowPrerelease: false
-      settings:
-        id: ShareX.ShareX
-        source: winget
-
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: nugetPackage
       directives:
         description: Install NuGet
         allowPrerelease: false
       settings:
         id: Microsoft.NuGet
-        source: winget
-
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: treeSizePackage
-      directives:
-        description: Install TreeSize
-        allowPrerelease: false
-      settings:
-        id: JAMSoftware.TreeSize.Free
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
@@ -167,24 +193,6 @@ properties:
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: gIMPPackage
-      directives:
-        description: Install GIMP
-        allowPrerelease: false
-      settings:
-        id: GIMP.GIMP
-        source: winget
-
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: sysinternalsPackage
-      directives:
-        description: Install Sysinternals
-        allowPrerelease: false
-      settings:
-        id: Microsoft.Sysinternals
-        source: winget
-
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: powerToysPackage
       directives:
         description: Install PowerToys
@@ -203,48 +211,12 @@ properties:
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: devTunnelsPackage
-      directives:
-        description: Install Microsoft DevTunnels
-        allowPrerelease: false
-      settings:
-        id: Microsoft.devtunnel
-        source: winget
-
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: devProxyPackage
-      directives:
-        description: Install Microsoft DevProxy
-        allowPrerelease: false
-      settings:
-        id: Microsoft.DevProxy
-        source: winget
-
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: jetbrainsRiderPackage
       directives:
         description: Install JetBrains Rider
         allowPrerelease: false
       settings:
         id: JetBrains.Rider
-        source: winget
-
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: firefoxPackage
-      directives:
-        description: Install Firefox Developer Edition
-        allowPrerelease: false
-      settings:
-        id: Mozilla.Firefox.DeveloperEdition
-        source: winget
-
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: firefoxDeveloperPackage
-      directives:
-        description: Install Firefox Developer
-        allowPrerelease: false
-      settings:
-        id: Mozilla.Firefox
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
@@ -293,12 +265,30 @@ properties:
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: nordVPN
+      directives:
+        description: Install NordVPN
+        allowPrerelease: false
+      settings:
+        id: NordSecurity.NordVPN
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: lmStudioPackage
       directives:
         description: Install LM Studio
         allowPrerelease: false
       settings:
         id: ElementLabs.LMStudio
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: foundrylocal
+      directives:
+        description: Install FoundryLocal
+        allowPrerelease: false
+      settings:
+        id: Microsoft.FoundryLocal
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
